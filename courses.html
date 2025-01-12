@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses </title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #f7f8fa, #dde1e7);
+    color: #333;
+}
+
+/* Header */
+.hd1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: #0077cc;
+    color: #fff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+    color: #f2c94c;
+}
+
+/* Keyframes for Animations */
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+        .courses {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .courses h2 {
+            margin-bottom: 20px;
+            font-size: 28px;
+            color: #0077cc;
+        }
+
+        .course-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .course-box {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .course-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .course-box h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: #0077cc;
+        }
+
+        .course-box p {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 15px;
+            font-size: 14px;
+            color: #fff;
+            background-color: #0077cc;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #005fa3;
+        }
+
+        footer {
+    background: #0077cc;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 40px;
+    font-size: 14px;
+}
+    </style>
+</head>
+<body>
+    <header class="hd1">
+        <h2 class="logo">SkillHub</h2>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="courses">
+        <h2>Our Featured Courses</h2>
+        <div class="course-grid">
+            <div class="course-box">
+                <h3>Advanced Python Programming</h3>
+                <p>Master Python with advanced concepts and hands-on projects.</p>
+                <a href="#" class="btn">Learn More</a>
+            </div>
+            <div class="course-box">
+                <h3>JavaScript for Web Development</h3>
+                <p>Learn modern JavaScript techniques for building dynamic websites.</p>
+                <a href="#" class="btn">Learn More</a>
+            </div>
+            <div class="course-box">
+                <h3>Graphic Design Masterclass</h3>
+                <p>Unlock your creativity and learn the principles of great design.</p>
+                <a href="#" class="btn">Learn More</a>
+            </div>
+            <div class="course-box">
+                <h3>eCommerce Essentials</h3>
+                <p>Start your online business with our comprehensive eCommerce course.</p>
+                <a href="#" class="btn">Learn More</a>
+            </div>
+            <div class="course-box">
+                <h3>Data Science with Python</h3>
+                <p>Analyze data and build models using Python for data science.</p>
+                <a href="#" class="btn">Learn More</a>
+            </div>
+            <div class="course-box">
+                <h3>Full Stack Web Development</h3>
+                <p>Become a full-stack developer by mastering both front-end and back-end skills.</p>
+                <a href="#" class="btn">Learn More</a>
+            </div>
+            <div class="course-box">
+                <h3>Cloud Computing Basics</h3>
+                <p>Understand cloud technologies and build your first cloud project.</p>
+                <a href="#" class="btn">Learn More</a>
+            </div>
+            <div class="course-box">
+                <h3>Cybersecurity Essentials</h3>
+                <p>Learn to protect systems and networks from cyber threats.</p>
+                <a href="#" class="btn">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2025 SkillHub. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

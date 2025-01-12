@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Gallery </title>
+    <style>
+        /* General Reset */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #f7f8fa, #dde1e7);
+    color: #333;
+}
+
+/* Header */
+.hd1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: #0077cc;
+    color: #fff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+    color: #f2c94c;
+}
+
+/* Keyframes for Animations */
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* Gallery Section */
+.gallery-section {
+    padding: 50px 20px;
+    text-align: center;
+    background: #f7f8fa;
+}
+
+.gallery-title {
+    font-size: 28px;
+    color: #0077cc;
+    margin-bottom: 10px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.gallery-description {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 40px;
+    line-height: 1.6;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.gallery-item {
+    position: relative;
+    width: 30%; /* Larger size for images */
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item img {
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+/* Responsive Gallery */
+@media (max-width: 768px) {
+    .gallery-item {
+        width: 45%; /* Two items in a row on tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-item {
+        width: 100%; /* Single item per row on mobile */
+    }
+}
+
+.testimonials {
+    text-align: center;
+    margin: 50px auto;
+    padding: 20px;
+    background: #f3f4f6;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.testimonials h2 {
+    color: #0077cc;
+    font-size: 26px;
+    margin-bottom: 30px;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns in each row */
+    gap: 20px; /* Space between boxes */
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.testimonial-box {
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    font-style: italic;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial-box p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.testimonial-box span {
+    display: block;
+    font-size: 14px;
+    color: #0077cc;
+    font-weight: bold;
+}
+
+
+.cta {
+    text-align: center;
+    margin: 40px auto;
+    padding: 30px;
+    background: linear-gradient(to right, #0077cc, #005fa3);
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.cta h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.cta p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #f2c94c;
+    color: #333;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+    background: #ffd700;
+}
+
+
+    </style>
+</head>
+<body>
+    <header class="hd1">
+        <h2 class="logo">SkillHub. </h2>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html" class="active">Gallery</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="gallery" class="gallery-section">
+        <h2 class="gallery-title">Our Gallery</h2>
+        <p class="gallery-description">
+            Explore our vibrant community through our gallery. From memorable events to everyday moments, these snapshots showcase the essence of our journey.
+        </p>
+        <div class="gallery-container">
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1864&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Event Image 1">
+            </div>
+            <div class="gallery-item">
+                <img src="https://media.istockphoto.com/id/669775712/photo/teacher-giving-an-it-class-at-school-to-a-group-of-students.jpg?s=1024x1024&w=is&k=20&c=ee_njGTPP6rT07FNGJIOrM22P8Wwdi4Ppm5_SJ0cc1w=" alt="Event Image 2">
+            </div>
+            <div class="gallery-item">
+                <img src="https://media.istockphoto.com/id/530951771/photo/students-using-computer-in-laboratory.jpg?s=1024x1024&w=is&k=20&c=exBAnfLlxJ1zJw__iqLYhqBjtf3UVjU5GIi7MZmigOw=" alt="Event Image 3">
+            </div>
+            <div class="gallery-item">
+                <img src="https://media.istockphoto.com/id/669775762/photo/teacher-giving-a-lecture-at-the-it-classroom-to-a-group-of-students.jpg?s=1024x1024&w=is&k=20&c=06fhldGoBannb47fFUfJsQ8j4m2tbYN39aPLv0H6TgE=" alt="Event Image 4">
+            </div>
+            <div class="gallery-item">
+                <img src="https://media.istockphoto.com/id/1365541024/photo/back-view-of-group-of-students-on-a-class-at-computer-lab.jpg?s=1024x1024&w=is&k=20&c=AeeaNMFg1bC5fCPoLk8pSFmPUieqsmQBfD01vUmsp2g=" alt="Event Image 5">
+            </div>
+            <div class="gallery-item">
+                <img src="https://media.istockphoto.com/id/1345073284/photo/back-view-of-group-of-students-on-a-class-at-computer-lab.jpg?s=1024x1024&w=is&k=20&c=R55150oiVDJuhhC_wp2n4ft5wdINDidErM-GUekofH4=" alt="Event Image 6">
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <h2>What Our Students Say</h2>
+        <div class="testimonials-grid">
+            <div class="testimonial-box">
+                <p>"SkillHub has transformed my learning experience. The courses and the environment are amazing!"</p>
+                <span>- Ayesha Khan</span>
+            </div>
+            <div class="testimonial-box">
+                <p>"The hands-on approach and expert trainers helped me achieve my goals. Highly recommended!"</p>
+                <span>- Ahmed Ali</span>
+            </div>
+            <div class="testimonial-box">
+                <p>"I learned so much in such a short time. Highly professional environment!"</p>
+                <span>- Sara Malik</span>
+            </div>
+            <div class="testimonial-box">
+                <p>"The trainers are very supportive, and the projects are super helpful for practical learning."</p>
+                <span>- Bilal Shah</span>
+            </div>
+            <div class="testimonial-box">
+                <p>"SkillHub provides excellent resources for beginners and advanced learners alike."</p>
+                <span>- Zara Ahmed</span>
+            </div>
+            <div class="testimonial-box">
+                <p>"I loved the interactive sessions and practical projects. Thank you, SkillHub!"</p>
+                <span>- Imran Khan</span>
+            </div>
+        </div>
+    </section>
+    
+    
+    <section class="cta">
+        <h2>Join Us Today!</h2>
+        <p>Be a part of our growing community and start your journey towards success.</p>
+        <a href="courses.html" class="cta-button">Explore Courses</a>
+    </section>
+    
+    
+</body>
+</html>

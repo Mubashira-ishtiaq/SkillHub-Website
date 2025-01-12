@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <style>
+    /* General Reset */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #f7f8fa, #dde1e7);
+    color: #333;
+}
+
+/* Header */
+.hd1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: #0077cc;
+    color: #fff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+    color: #f2c94c;
+}
+
+
+/* About Section */
+.about-section {
+    padding: 40px 20px;
+    text-align: center;
+    margin: 20px auto;
+    max-width: 800px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.about-section h1 {
+    font-size: 32px;
+    color: #0077cc;
+    margin-bottom: 20px;
+}
+
+.about-section p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Mission & Vision Section */
+.mission-vision {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 40px 20px;
+    background: #eef5ff;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+.mission-box, .vision-box {
+    flex: 1 1 45%;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.mission-box:hover, .vision-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.mission-box h2, .vision-box h2 {
+    color: #0077cc;
+    margin-bottom: 15px;
+}
+
+.mission-box p, .vision-box p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Values Section */
+.values-section {
+    padding: 40px 20px;
+    text-align: center;
+    margin: 20px auto;
+    max-width: 800px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.values-section h2 {
+    font-size: 28px;
+    color: #0077cc;
+    margin-bottom: 20px;
+}
+
+.values-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.values-section li {
+    font-size: 18px;
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+.values-section li strong {
+    color: #0077cc;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Navigation Active State */
+.nav-links a.active {
+    border-bottom: 2px solid #f2c94c;
+    padding-bottom: 5px;
+}
+
+.footer {
+    background: #0077cc;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 40px;
+    font-size: 14px;
+}
+</style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="hd1">
+        <div class="logo">SkillHub</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </header>
+
+    <!-- About Section -->
+    <section class="about-section">
+        <h1>About SkillHub</h1>
+        <p>
+            At SkillHub, we believe in empowering individuals with knowledge and skills to succeed in their personal 
+            and professional lives. With a passion for innovation and a commitment to quality education, we provide 
+            courses designed to meet the needs of modern learners.
+        </p>
+    </section>
+
+    <!-- Mission & Vision Section -->
+    <section class="mission-vision">
+        <div class="mission-box">
+            <h2>Our Mission</h2>
+            <p>
+                Our mission is to deliver high-quality, accessible, and practical education that bridges the gap between 
+                learning and application. We aim to inspire our students to excel and achieve their dreams.
+            </p>
+        </div>
+        <div class="vision-box">
+            <h2>Our Vision</h2>
+            <p>
+                To become a leading platform for skill development, recognized globally for innovative learning solutions 
+                and exceptional student outcomes.
+            </p>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="values-section">
+        <h2>Our Core Values</h2>
+        <ul>
+            <li><strong>Excellence:</strong> Striving for the highest standards in everything we do.</li>
+            <li><strong>Innovation:</strong> Encouraging creativity and forward-thinking in education.</li>
+            <li><strong>Integrity:</strong> Acting with honesty, transparency, and respect.</li>
+            <li><strong>Community:</strong> Building a supportive and collaborative learning environment.</li>
+        </ul>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 SkillHub. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
